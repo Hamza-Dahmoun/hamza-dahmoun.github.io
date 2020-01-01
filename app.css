@@ -585,7 +585,7 @@ html, body {
     color: var(--white);
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: flex-end;
     position: fixed;
     top: 0;
     width: 100%;
