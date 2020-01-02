@@ -1,3 +1,4 @@
+/********************************************* MENU BUTTON CLICKS IN MOBILE DEVICE */
 document.querySelector("#navbar i").addEventListener("click", showMenu);
 function showMenu() {
     let menuBtnContainer = document.getElementById("menu-buttons-container");
@@ -16,3 +17,69 @@ function hideMenu() {
     document.querySelector("#navbar i").removeEventListener("click", hideMenu);
     document.querySelector("#navbar i").addEventListener("click", showMenu);
 }
+/********************************************* PROJECTS HOVER EFFECT SIMULATION IN MOBILE DEVICE */
+let projects = document.getElementsByClassName("project-tile");
+for (let i = 0; i < projects.length; i++) {
+    projects[i].addEventListener("touchstart", projectTouchStart);
+    projects[i].addEventListener("touchend", projectTouchEnd);
+}
+
+function projectTouchStart(event) {
+    //this function makes the project container elements transparent and displays the project description and links
+    //1- make touched elements transparent
+    let project_tile = event.target.closest(".project-tile");//bringing the nearest element that have a class 'project-tile'
+    let project_name_container = event.target.closest(".project-tile").querySelector(".project-name-container");//bringing the nearest element that have a class 'project-name-container'
+    let project_picture = event.target.closest(".project-tile").querySelector(".project-picture");//bringing the nearest element that have a class 'project-picture'
+    let technologies_in_project_container = event.target.closest(".project-tile").querySelector(".technologies-in-project-container");//bringing the nearest element that have a class 'technologies-in-project-container'    
+    project_tile.style.boxShadow = "0px 0px 10px var(--cool-gray)";
+    project_name_container.style.opacity = 0.1;
+    project_picture.style.opacity = 0.1;
+    technologies_in_project_container.style.opacity = 0.1;
+    //2- display hiden elements
+    let project_description_and_buttons_container = event.target.closest(".project-tile").querySelector(".project-description-and-buttons-container");//bringing the nearest element that have a class 'project-description-and-buttons-container'    
+    project_description_and_buttons_container.style.opacity = 1;    
+}
+function projectTouchEnd(event) {
+    //this function makes the project container elements opacity=1 and hide the project description and links
+    //1- make the project container elements opacity=1
+    let project_tile = event.target.closest(".project-tile");//bringing the nearest element that have a class 'project-tile'
+    let project_name_container = event.target.closest(".project-tile").querySelector(".project-name-container");//bringing the nearest element that have a class 'project-name-container'
+    let project_picture = event.target.closest(".project-tile").querySelector(".project-picture");//bringing the nearest element that have a class 'project-picture'
+    let technologies_in_project_container = event.target.closest(".project-tile").querySelector(".technologies-in-project-container");//bringing the nearest element that have a class 'technologies-in-project-container'    
+    project_tile.style.boxShadow = "none";
+    project_name_container.style.opacity = 1;
+    project_picture.style.opacity = 1;
+    technologies_in_project_container.style.opacity = 1;
+    //2- hide the project description and links
+    let project_description_and_buttons_container = event.target.closest(".project-tile").querySelector(".project-description-and-buttons-container");//bringing the nearest element that have a class 'project-description-and-buttons-container'    
+    project_description_and_buttons_container.style.opacity = 0;   
+}
+
+/*
+.project-tile:hover {
+    transition-duration: 0.5s;
+    box-shadow: 0px 0px 10px var(--cool-gray);
+}
+.project-tile:hover .project-description-and-buttons-container {
+    transition-duration: 0.5s;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    z-index: 2;
+}
+
+.project-tile:hover .project-name-container {
+    transition-duration: 0.4s;
+    opacity: 0.1;
+}
+
+.project-tile:hover .project-picture {
+    transition-duration: 0.4s;
+    opacity: 0.1;
+}
+
+.project-tile:hover .technologies-in-project-container {
+    transition-duration: 0.4s;
+    opacity: 0.1;
+}
+*/
