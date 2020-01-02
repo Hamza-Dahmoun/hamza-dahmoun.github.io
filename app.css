@@ -389,6 +389,7 @@ html, body {
     text-decoration: none;
     border: 1px solid #aaa;
     padding-top: 0%;
+    z-index:1:
 }
 
 @media screen and (max-width: 300px) {
@@ -508,13 +509,19 @@ html, body {
 .project-tile .project-description-and-buttons-container a{
     border:2px solid var(--cool-gray);
     padding:8px;
+    text-decoration:none;
+    color: var(--cool-gray);
+}
+.project-tile .project-description-and-buttons-container .project-description-container{
+    margin-top:10px;
 }
 
 .project-tile:hover .project-description-and-buttons-container {
     transition-duration: 0.5s;
     display: flex;
     flex-direction: column;
-    opacity: 1;
+    opacity: 1;    
+    z-index:2;
 }
 
 .project-tile:hover .project-name-container {
