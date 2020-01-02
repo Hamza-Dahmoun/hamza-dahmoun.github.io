@@ -389,7 +389,6 @@ html, body {
     text-decoration: none;
     border: 1px solid #aaa;
     padding-top: 0%;
-    z-index:1:
 }
 
 @media screen and (max-width: 300px) {
@@ -505,6 +504,7 @@ html, body {
     position: absolute;
     padding:10px;
     color:var(--cool-gray);
+    font-family:var(--my-font);
 }
 .project-tile .project-description-and-buttons-container a{
     border:2px solid var(--cool-gray);
