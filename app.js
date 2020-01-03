@@ -55,31 +55,3 @@ function projectTouchEnd(event) {
     project_description_and_buttons_container.style.opacity = 0;   
 }
 
-/*
-.project-tile:hover {
-    transition-duration: 0.5s;
-    box-shadow: 0px 0px 10px var(--cool-gray);
-}
-.project-tile:hover .project-description-and-buttons-container {
-    transition-duration: 0.5s;
-    display: flex;
-    flex-direction: column;
-    opacity: 1;
-    z-index: 2;
-}
-
-.project-tile:hover .project-name-container {
-    transition-duration: 0.4s;
-    opacity: 0.1;
-}
-
-.project-tile:hover .project-picture {
-    transition-duration: 0.4s;
-    opacity: 0.1;
-}
-
-.project-tile:hover .technologies-in-project-container {
-    transition-duration: 0.4s;
-    opacity: 0.1;
-}
-*/
