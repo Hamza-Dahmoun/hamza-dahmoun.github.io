@@ -17,6 +17,10 @@ function hideMenu() {
     document.querySelector("#navbar i").removeEventListener("click", hideMenu);
     document.querySelector("#navbar i").addEventListener("click", showMenu);
 }
+let menuLinks = document.querySelectorAll("#navbar a");
+for(let i=0; i<menuLinks.length; i++){
+    menuLinks[i].addEventListener("click", hideMenu);
+}
 /********************************************* PROJECTS HOVER EFFECT SIMULATION IN MOBILE DEVICE */
 let projects = document.getElementsByClassName("project-tile");
 for (let i = 0; i < projects.length; i++) {
