@@ -636,6 +636,7 @@ html, body {
     top: 0;
     width: 100%;
     box-shadow: 0px 5px 10px var(--cool-gray);
+    z-index:11;
 }
 
 #navbar .menu-buttons-container {
@@ -712,7 +713,7 @@ html, body {
         width: 100%;
         transition-duration: 1.5s;
         top: 0%;
-        z-index: 2;
+        z-index: 10;
     }
     #navbar .menu-buttons-container-hidden {
         display: none;
