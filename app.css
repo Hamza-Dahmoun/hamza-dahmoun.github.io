@@ -230,11 +230,24 @@ html, body {
 
 #my-technologies h2 {
     width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: center;
+    background-color: var(--cool-gray);
+    color: white;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 2%;
+    padding-right: 2%;
+    letter-spacing: 3px;
+    font-size: 36px;
+    /*
+    width: 100%;
     letter-spacing: 3px;
     font-size: 36px;
     margin-bottom: 5%;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;*/
 }
 
 #my-technologies div {
@@ -272,8 +285,6 @@ html, body {
     #my-technologies h2 {
         letter-spacing: 3px;
         font-size: 30px;
-        margin-left: 4%;
-        margin-right: 4%;
     }
     #my-technologies div i {
         font-size: 85px;
@@ -312,6 +323,7 @@ html, body {
 
 @media screen and (max-width: 200px) {
     #my-technologies h2 {
+        letter-spacing: 3px;
         font-size: 20px;
     }
     #my-technologies div i {
