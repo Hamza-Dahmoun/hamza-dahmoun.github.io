@@ -396,8 +396,8 @@ html, body {
 @media screen and (max-width: 300px) {
     /*add margintop and bottom to project tiles when it is a mobile and projects are one above another*/
     .project-tile {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 40px;
+        margin-bottom: 40px;
         max-height: 380px;
         min-height: 380px;
     }
