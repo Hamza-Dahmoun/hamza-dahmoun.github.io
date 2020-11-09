@@ -1,6 +1,6 @@
 :root {
-    --cool-gray: #4E4F50;
-    --white: #fff;
+    --cool-gray: #151515/*#4E4F50*/;
+    --white: #F6F6F6/*#fff*/;
     --my-font: 'Noto Serif', serif;
 }
 html{
