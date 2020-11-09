@@ -185,17 +185,41 @@ html, body {
     text-decoration: none;
     border-radius: 50%;
     border: 2px solid var(--white);
-    background-color: var(--cool-gray);
-    color: var(--white);
-    transition-duration: 0.5s;
-}
-
-#welcome-section #first-social-media-profiles-links-container a:hover {
     color: var(--cool-gray);
     background-color: var(--white);
     transition-duration: 0.5s;
 }
 
+#welcome-section #first-social-media-profiles-links-container a:hover {
+    background-color: var(--cool-gray);
+    color: var(--white);
+    transition-duration: 0.5s;
+}
+.slowly-appearing1 {
+    animation-name: slowly_appear;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.slowly-appearing2 {
+    animation-name: slowly_appear;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+.slowly-appearing3 {
+    animation-name: slowly_appear;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slowly_appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 @media screen and (max-width: 600px) {
     #welcome-section #first-social-media-profiles-links-container a {
         width: 70px;
