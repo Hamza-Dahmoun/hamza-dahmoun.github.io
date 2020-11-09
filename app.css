@@ -38,8 +38,9 @@ html, body {
     color: var(--cool-gray);
     background-color: var(--white);
     font-size: 25px;
-    letter-spacing: 6px;
-    padding: 7px;
+    letter-spacing: 5px;
+    padding-left: 7px;padding-right:7px;
+    display: inline-block;
 }
 
 @media screen and (max-width: 600px) {
