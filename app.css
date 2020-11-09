@@ -127,7 +127,7 @@ html, body {
     font-size: 20px;
     color: var(--white);
     word-spacing: 4px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 @media screen and (max-width: 850px) {
@@ -246,7 +246,7 @@ html, body {
     padding-bottom: 4%;
     padding-left: 2%;
     padding-right: 2%;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
     font-size: 36px;
 }
 
@@ -359,7 +359,7 @@ html, body {
     padding-bottom: 4%;
     padding-left: 2%;
     padding-right: 2%;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
     font-size: 36px;
 }
 
@@ -674,6 +674,7 @@ html, body {
     text-decoration: none;
     height: 50px;
     line-height: 50px;
+    letter-spacing: 3px;;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 18px;
