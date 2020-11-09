@@ -34,6 +34,13 @@ html, body {
     font-size: 25px;
     letter-spacing: 6px;
 }
+#welcome-section #job-title{
+    color: var(--cool-gray);
+    background-color: var(--white);
+    font-size: 25px;
+    letter-spacing: 6px;
+    padding: 7px;
+}
 
 @media screen and (max-width: 600px) {
     #welcome-section h1 {
