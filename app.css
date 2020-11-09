@@ -1,5 +1,6 @@
 :root {
     --cool-gray: #151515/*#4E4F50*/;
+    --gray:#1f1f1f;
     --white: #F6F6F6/*#fff*/;
     --my-font: 'Noto Serif', serif;
 }
@@ -22,7 +23,23 @@ html, body {
     color: white;
     text-align: center;
     margin-top:8vh;
-    padding-bottom: 1%;
+    animation-name: switch-bg-color;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes switch-bg-color {
+    0% {
+        background-color: var(--cool-gray);
+    }
+
+    50% {
+        background-color: var(--cool-gray);
+    }
+    100% {
+        background-color: var(--gray);
+    }
 }
 
 #welcome-section h1 {
@@ -37,12 +54,13 @@ html, body {
 #welcome-section #job-title{
     color: var(--cool-gray);
     background-color: var(--white);
-    font-size: 25px;
     letter-spacing: 5px;
     padding-left: 7px;padding-right:7px;
     display: inline-block;
 }
-
+#welcome-section #hi-msg{
+    padding-top: 10px;
+}
 @media screen and (max-width: 600px) {
     #welcome-section h1 {
         font-size: 32px;
@@ -196,31 +214,7 @@ html, body {
     color: var(--white);
     transition-duration: 0.5s;
 }
-.slowly-appearing1 {
-    animation-name: slowly_appear;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-.slowly-appearing2 {
-    animation-name: slowly_appear;
-    animation-duration: 4s;
-    animation-fill-mode: forwards;
-}
-.slowly-appearing3 {
-    animation-name: slowly_appear;
-    animation-duration: 6s;
-    animation-fill-mode: forwards;
-}
 
-@keyframes slowly_appear {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
 @media screen and (max-width: 600px) {
     #welcome-section #first-social-media-profiles-links-container a {
         width: 70px;
@@ -247,6 +241,8 @@ html, body {
         font-size: 37px;
     }
 }
+
+
 
 #my-technologies {
     color: var(--cool-gray)/*#555*/
@@ -666,8 +662,8 @@ html, body {
     justify-content: flex-end;
     position: fixed;
     top: 0;
-    width: 100%;
-    box-shadow: 0px 5px 10px var(--cool-gray);
+    width: 100%;/*
+    box-shadow: 0px 5px 10px var(--gray);*/
     z-index:11;
     height:8vh;
 }
