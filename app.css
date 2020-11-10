@@ -113,25 +113,31 @@ html, body {
     margin-top: 2%;
     border: 2px solid var(--white);
 }
-
-@media screen and (max-width: 600px) {    
+@media screen and (max-width: 1000px) {    
     #welcome-section #introduction img {
         height: 165px;
         width: 165px;
     }
 }
 
-@media screen and (max-width: 400px) {    
+@media screen and (max-width: 800px) {    
     #welcome-section #introduction img {
         height: 150px;
         width: 150px;
+    }
+}
+
+@media screen and (max-width: 600px) {    
+    #welcome-section #introduction img {
+        height: 135px;
+        width: 135px;
     }    
 }
 
-@media screen and (max-width: 250px) {
+@media screen and (max-width: 400px) {
     #welcome-section #introduction img {
-        height: 130px;
-        width: 130px;
+        height: 115px;
+        width: 115px;
     }
 }
 
