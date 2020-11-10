@@ -264,21 +264,23 @@ from {
     text-align: center;
     margin-top: 7%;
     margin-bottom: 7%;
+    width: 80%; margin-left: auto; margin-right:auto;
 }
 
 #my-technologies h2 {
     width: 100%;
-    margin-left: 0px;
-    margin-right: 0px;
     text-align: center;
-    background-color: var(--cool-gray);
-    color: white;
-    padding-top: 4%;
-    padding-bottom: 4%;
-    padding-left: 2%;
-    padding-right: 2%;
-    letter-spacing: 5px;
-    font-size: 36px;
+    color: var(--cool-gray);
+    letter-spacing: 10px;
+    font-size: 50px;
+}
+#my-technologies h2 p{
+    display:inline-block;
+    padding: 5px;
+    padding-left: 18px;
+    width: fit-content;
+    border-left:3px solid var(--cool-gray);
+    border-bottom:3px solid var(--cool-gray);
 }
 
 #my-technologies div {
@@ -286,12 +288,11 @@ from {
 }
 
 #my-technologies div i {
-    font-size: 115px;
+    font-size: 80px;
 }
 
 #my-technologies div p {
     font-size: 23px;
-    margin: 10px;
 }
 
 #my-technologies div * {
@@ -304,48 +305,50 @@ from {
 }
 
 @media screen and (max-width: 900px) {
-    #my-technologies div i {
-        font-size: 100px;
-    }
-    #my-technologies div p {
-        font-size: 20px;
-    }
-}
-
-@media screen and (max-width: 600px) {
     #my-technologies h2 {
         letter-spacing: 3px;
-        font-size: 30px;
+        font-size: 40px;
     }
-    #my-technologies div i {
-        font-size: 85px;
-    }
-    #my-technologies div p {
-        font-size: 18px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    #my-technologies h2 {
-        letter-spacing: 3px;
-        font-size: 27px;
+    #my-technologies div {
+        margin: 18px;
     }
     #my-technologies div i {
         font-size: 70px;
     }
     #my-technologies div p {
-        font-size: 15px;
-        margin: 5px;
+        font-size: 19px;
     }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 600px) {
+    #my-technologies {
+        width: 95%; margin-left: auto; margin-right:auto;
+    }
+    #my-technologies div{
+        margin: 15px;
+    }
     #my-technologies h2 {
         letter-spacing: 3px;
-        font-size: 22px;
+        font-size: 30px;
     }
     #my-technologies div i {
-        font-size: 55px;
+        font-size: 60px;
+    }
+    #my-technologies div p {
+        font-size: 17px;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    #my-technologies {
+        width: 98%; margin-left: auto; margin-right:auto;
+    }
+    #my-technologies div {
+        margin: 12px;
+    }
+    #my-technologies div i {
+        font-size: 50px;
     }
     #my-technologies div p {
         font-size: 12px;
@@ -355,7 +358,7 @@ from {
 @media screen and (max-width: 200px) {
     #my-technologies h2 {
         letter-spacing: 3px;
-        font-size: 20px;
+        font-size: 22px;
     }
     #my-technologies div i {
         font-size: 50px;
