@@ -42,11 +42,6 @@ html, body {
     }
 }
 
-#welcome-section h1 {
-    font-size: 40px;
-    letter-spacing: 3px;
-}
-
 #welcome-section p {
     font-size: 25px;
     letter-spacing: 6px;
@@ -55,20 +50,17 @@ html, body {
     color: var(--cool-gray);
     background-color: var(--white);
     letter-spacing: 5px;
-    padding-left: 7px;padding-right:7px;
     display: inline-block;
+    padding-right: 5px; padding-left: 5px;
 }
-#welcome-section #hi-msg{
-    padding-top: 10px;
-}
-@media screen and (max-width: 600px) {
-    #welcome-section h1 {
-        font-size: 32px;
-        letter-spacing: 3px;
+
+@media screen and (max-width: 600px) {    
+    #welcome-section {
+        padding-top: 10px;
     }
     #welcome-section p {
         font-size: 22px;
-        letter-spacing: 6px;
+        letter-spacing: 5px;
     }
 }
 
@@ -79,10 +71,18 @@ html, body {
     }
     #welcome-section p {
         font-size: 20px;
-        letter-spacing: 6px;
+        letter-spacing: 4px;
     }
 }
-
+@media screen and (max-width: 300px) {
+    #welcome-section #job-title{
+        padding-top: 0px; padding-bottom: 0px;      
+    }
+    #welcome-section #job-title p{
+        margin-top: 4px; margin-bottom: 4px;      
+    }
+}
+    
 @media screen and (max-width: 230px) {
     #welcome-section h1 {
         font-size: 20px;
@@ -90,16 +90,15 @@ html, body {
     }
     #welcome-section p {
         font-size: 18px;
-        letter-spacing: 6px;
     }
 }
 
 #welcome-section #introduction {
-    width: 100%;
+    width: 98%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    margin-bottom: 3%;
+    margin-bottom: 3%;margin-top: 3%;
 }
 #welcome-section #introduction a{
     font-weight: bold;
@@ -115,22 +114,18 @@ html, body {
     border: 2px solid var(--white);
 }
 
-@media screen and (max-width: 600px) {
-    #welcome-section {
-        padding-top: 50px;
-        ;
-    }
+@media screen and (max-width: 600px) {    
     #welcome-section #introduction img {
         height: 165px;
         width: 165px;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) {    
     #welcome-section #introduction img {
         height: 150px;
         width: 150px;
-    }
+    }    
 }
 
 @media screen and (max-width: 250px) {
