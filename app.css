@@ -18,7 +18,7 @@ html, body {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
-    height: 92vh;
+    min-height: 92vh;
     background-color: var(--cool-gray);
     color: white;
     text-align: center;
@@ -195,36 +195,26 @@ html, body {
 }
 
 #welcome-section #first-social-media-profiles-links-container a {
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 80px;
-    height: 80px;
-    line-height: 80px;
-    font-size: 55px;
+    margin: 5px;
+    width: 70px;
+    height: 70px;        
+    line-height: 70px;       
+    font-size: 49px;        
     text-decoration: none;
     border-radius: 50%;
     border: 2px solid var(--white);
-    color: var(--cool-gray);
-    background-color: var(--white);
-    transition-duration: 0.5s;
-}
-
-#welcome-section #first-social-media-profiles-links-container a:hover {
     background-color: var(--cool-gray);
     color: var(--white);
     transition-duration: 0.5s;
+    animation-name: switch-bg-color;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
-@media screen and (max-width: 600px) {
-    #welcome-section #first-social-media-profiles-links-container a {
-        width: 70px;
-        height: 70px;
-        line-height: 70px;
-        font-size: 49px;
-    }
-}
 
-@media screen and (max-width: 400px) {
+
+@media screen and (max-width: 800px) {
     #welcome-section #first-social-media-profiles-links-container a {
         width: 60px;
         height: 60px;
@@ -233,7 +223,7 @@ html, body {
     }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 600px) {
     #welcome-section #first-social-media-profiles-links-container a {
         width: 50px;
         height: 50px;
@@ -242,6 +232,14 @@ html, body {
     }
 }
 
+@media screen and (max-width: 400px) {
+    #welcome-section #first-social-media-profiles-links-container a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 32px;
+    }
+}
 
 
 #my-technologies {
