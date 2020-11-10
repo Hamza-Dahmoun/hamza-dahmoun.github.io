@@ -223,7 +223,9 @@ from {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-
+#welcome-section #first-social-media-profiles-links-container a:hover{
+    transform: scale(1.1);
+}
 
 @media screen and (max-width: 800px) {
     #welcome-section #first-social-media-profiles-links-container a {
