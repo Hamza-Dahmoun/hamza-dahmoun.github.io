@@ -267,14 +267,14 @@ from {
     width: 80%; margin-left: auto; margin-right:auto;
 }
 
-#my-technologies h2 {
+.title {
     width: 100%;
     text-align: center;
     color: var(--cool-gray);
     letter-spacing: 10px;
     font-size: 50px;
 }
-#my-technologies h2 p{
+.title p{
     display:inline-block;
     padding: 5px;
     padding-left: 18px;
@@ -382,20 +382,6 @@ from {
     justify-content: center;
 }
 
-#projects h2 {
-    width: 100%;
-    margin-left: 0px;
-    margin-right: 0px;
-    text-align: center;
-    background-color: var(--cool-gray);
-    color: white;
-    padding-top: 4%;
-    padding-bottom: 4%;
-    padding-left: 2%;
-    padding-right: 2%;
-    letter-spacing: 5px;
-    font-size: 36px;
-}
 
 @media screen and (max-width: 600px) {
     #projects h2 {
@@ -785,20 +771,9 @@ from {
     text-align: center;
 }
 
-#contacts h2 {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: var(--cool-gray);
-    color: white;
-    padding-top: 4%;
-    padding-bottom: 4%;
-    letter-spacing: 3px;
-    text-align: center;
-    font-size: 36px;
-}
 
-#contacts p {
+
+#contacts .contacts-text {
     font-size: 20px;
     color: var(--cool-gray);
     letter-spacing: 2px;
@@ -808,7 +783,7 @@ from {
     #contacts h2 {
         font-size: 30px;
     }
-    #contacts p {
+    #contacts .contacts-text {
         font-size: 18px;
     }
 }
@@ -817,7 +792,7 @@ from {
     #contacts h2 {
         font-size: 27px;
     }
-    #contacts p {
+    #contacts .contacts-text {
         font-size: 16px;
     }
 }
@@ -826,7 +801,7 @@ from {
     #contacts h2 {
         font-size: 22px;
     }
-    #contacts p {
+    #contacts .contacts-text {
         font-size: 14px;
     }
     #contacts p strong {
@@ -838,7 +813,7 @@ from {
     #contacts h2 {
         font-size: 20px;
     }
-    #contacts p {
+    #contacts .contacts-text {
         font-size: 12px;
     }
 }
