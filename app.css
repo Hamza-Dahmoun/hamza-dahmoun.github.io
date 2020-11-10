@@ -305,7 +305,7 @@ from {
 }
 
 @media screen and (max-width: 900px) {
-    #my-technologies h2 {
+    .title {
         letter-spacing: 3px;
         font-size: 40px;
     }
@@ -327,7 +327,7 @@ from {
     #my-technologies div{
         margin: 15px;
     }
-    #my-technologies h2 {
+    .title {
         letter-spacing: 3px;
         font-size: 30px;
     }
@@ -356,7 +356,7 @@ from {
 }
 
 @media screen and (max-width: 200px) {
-    #my-technologies h2 {
+    .title {
         letter-spacing: 3px;
         font-size: 22px;
     }
@@ -383,33 +383,33 @@ from {
 }
 
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
     #projects h2 {
         letter-spacing: 3px;
         font-size: 30px;
     }
-}
+} */
 
-@media screen and (max-width: 400px) {
+/* @media screen and (max-width: 400px) {
     #projects h2 {
         letter-spacing: 3px;
         font-size: 27px;
     }
-}
+} */
 
-@media screen and (max-width: 300px) {
+/* @media screen and (max-width: 300px) {
     #projects h2 {
         letter-spacing: 3px;
         font-size: 22px;
     }
-}
+} */
 
-@media screen and (max-width: 200px) {
+/* @media screen and (max-width: 200px) {
     #projects h2 {
         letter-spacing: 3px;
         font-size: 20px;
     }
-}
+} */
 
 .project-tile {
     width: 320px;
@@ -780,27 +780,27 @@ from {
 }
 
 @media screen and (max-width: 600px) {
-    #contacts h2 {
+    /* #contacts h2 {
         font-size: 30px;
-    }
+    } */
     #contacts .contacts-text {
         font-size: 18px;
     }
 }
 
 @media screen and (max-width: 400px) {
-    #contacts h2 {
+    /* #contacts h2 {
         font-size: 27px;
-    }
+    } */
     #contacts .contacts-text {
         font-size: 16px;
     }
 }
 
 @media screen and (max-width: 300px) {
-    #contacts h2 {
+    /* #contacts h2 {
         font-size: 22px;
-    }
+    } */
     #contacts .contacts-text {
         font-size: 14px;
     }
@@ -810,9 +810,9 @@ from {
 }
 
 @media screen and (max-width: 200px) {
-    #contacts h2 {
+    /* #contacts h2 {
         font-size: 20px;
-    }
+    } */
     #contacts .contacts-text {
         font-size: 12px;
     }
