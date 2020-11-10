@@ -8,6 +8,7 @@ function showMenu() {
 
     document.querySelector("#navbar i").removeEventListener("click", showMenu);
     document.querySelector("#navbar i").addEventListener("click", hideMenu);
+    document.querySelector("#navbar i").className = "fa fa-times";
 }
 function hideMenu() {
     let menuBtnContainer = document.getElementById("menu-buttons-container");
@@ -16,6 +17,7 @@ function hideMenu() {
 
     document.querySelector("#navbar i").removeEventListener("click", hideMenu);
     document.querySelector("#navbar i").addEventListener("click", showMenu);
+    document.querySelector("#navbar i").className = "fa fa-bars";
 }
 let menuLinks = document.querySelectorAll("#navbar a");
 for (let i = 0; i < menuLinks.length; i++) {
