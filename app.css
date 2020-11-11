@@ -710,11 +710,6 @@ from {
     }
 }
 
-#projects #btn-container #load-more-btn:hover {
-    background-color: var(--white);
-    color: var(--cool-gray);
-    transition-duration: 0.5s;
-}
 
 #navbar {
     background-color: var(--cool-gray);
