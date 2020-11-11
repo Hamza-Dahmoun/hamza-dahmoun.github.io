@@ -69,3 +69,31 @@ function projectTouchEnd(event) {
 
 }
 
+/********************************************* LOAD MORE BUTTON EVENT*/
+document.getElementById("load-more-btn").addEventListener("click", displaySecondaryProjects);
+function displaySecondaryProjects(){
+    let secondaryProjects = document.getElementsByClassName("secondary-project");
+    for(let i=0; i<secondaryProjects.length; i++){
+        secondaryProjects[i].style.display = "block";
+    }
+
+    //lets nw change the function of the click event of this button
+    let btn = document.getElementById("load-more-btn");
+    btn.removeEventListener("click", displaySecondaryProjects);
+    btn.addEventListener("click", hideSecondaryProjects);
+    btn.innerHTML = "Less <i class='fa fa-angle-double-up' aria-hidden='true'></i>";
+    btn.setAttribute("title", "Less");
+}
+function hideSecondaryProjects(){
+    let secondaryProjects = document.getElementsByClassName("secondary-project");
+    for(let i=0; i<secondaryProjects.length; i++){
+        secondaryProjects[i].style.display = "none";
+    }
+
+    //lets nw change the function of the click event of this button
+    let btn = document.getElementById("load-more-btn");
+    btn.removeEventListener("click", hideSecondaryProjects);
+    btn.addEventListener("click", displaySecondaryProjects);
+    btn.innerHTML = "Load more <i class='fa fa-angle-double-down' aria-hidden='true'></i>";
+    btn.setAttribute("title", "Load more projects");
+}

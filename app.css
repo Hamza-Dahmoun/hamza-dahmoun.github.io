@@ -387,7 +387,9 @@ from {
 
 
 
-
+.secondary-project{
+    display: none;;
+}
 .project-tile {
     width: 320px;
     max-height: 480px;
@@ -608,7 +610,7 @@ from {
     width: 100%;
     margin-top: 5%;
     margin-bottom: 5%;
-    display: none /*flex*/;
+    display: flex;
     flex-direction: row;
     justify-content: center;
 }
@@ -621,6 +623,7 @@ from {
     font-size: 20px;
     cursor: pointer;
     transition-duration: 0.5s;
+    width: 150px;
 }
 
 @media screen and (max-width: 600px) {
