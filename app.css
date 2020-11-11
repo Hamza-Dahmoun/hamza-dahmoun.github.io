@@ -914,8 +914,7 @@ from {
 }
 
 #contacts #social-media-profiles-links-container a:hover {
-    color: var(--cool-gray);
-    background-color: var(--white);
+    transform: scale(1.1);
     transition-duration: 0.5s;
 }
 
