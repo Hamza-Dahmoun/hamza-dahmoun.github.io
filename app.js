@@ -13,9 +13,7 @@ function showMenu() {
 }
 function hideMenu() {
     let menuBtnContainer = document.getElementById("menu-buttons-container");
-    // menuBtnContainer.className = "menu-buttons-container-hidden";
     menuBtnContainer.style.animationName = "move-menu-up";
-    /*Please read the description of css class .menu-buttons-container-hidden in css file*/
 
     document.querySelector("#navbar i").removeEventListener("click", hideMenu);
     document.querySelector("#navbar i").addEventListener("click", showMenu);

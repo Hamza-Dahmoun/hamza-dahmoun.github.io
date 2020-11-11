@@ -388,24 +388,23 @@ from {
 .project-tile {
     width: 320px;
     max-height: 480px;
-    min-height: 480px/*340px*/
-    ;
-    /*margin: 20px;*/
+    min-height: 480px;
     cursor: pointer;
     transition-duration: 0.5s;
     margin: 3%;
     text-decoration: none;
     border: 1px solid #aaa;
     padding-top: 0%;
+    background-color: #fff;;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 400px) {
     /*add margintop and bottom to project tiles when it is a mobile and projects are one above another*/
     .project-tile {
         margin-top: 40px;
         margin-bottom: 40px;
-        max-height: 380px;
-        min-height: 380px;
+        max-height: 390px;
+        min-height: 390px;
     }
 }
 
@@ -419,9 +418,8 @@ from {
     margin: 0%;
     text-align: center;
     height: 10%;
-    background-color: var(--cool-gray)/*#555*/
-    ;
-    color: var(--white);
+    color: var(--cool-gray);
+    background-color: #fff;
     font-size: 1.1em;
     /*22px*/
     ;
@@ -431,18 +429,18 @@ from {
     justify-content: center;
     transition-duration: 0.6s;
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 400px) {
     .project-tile .project-name-container {
-        font-size: 0.9em;
+        font-size: 16px;
         letter-spacing:auto;
     }
 }
 
 .project-tile .project-picture {
     width: 100%;
-    max-height: 80%;
-    min-height: 80%;
-    height: 80%;
+    max-height: 79%;
+    min-height: 79%;
+    height: 79%;
     margin: 0%;
     padding: 0%;
     border-bottom: 1px solid #aaa;
@@ -464,9 +462,8 @@ from {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    background-color: var(--cool-gray)/*#555*/
-    ;
-    color: var(--white);
+    color: var(--cool-gray);
+    background-color: #fff;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -474,7 +471,7 @@ from {
     padding: 0px;
     transition-duration: 0.6s;
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 400px) {
     .project-tile .technologies-in-project-container {
         flex-wrap: nowrap;;
     }
@@ -492,9 +489,11 @@ from {
 }
 
 .project-tile .technologies-in-project-container .technologies-in-project p {
+    /*center p tags vertically inside its parent*/
     align-self: center;
     font-size: 13px;
-    /*center p tags vertically inside its parent*/
+    letter-spacing: 1px;
+    text-align: center;    
 }
 
 .project-tile .technologies-in-project-container .project-type {
@@ -507,11 +506,29 @@ from {
 }
 
 .project-tile .technologies-in-project-container .project-type p {
+    /*center p tags vertically inside its parent*/
     align-self: center;
     font-size: 13px;
-    /*center p tags vertically inside its parent*/
+    letter-spacing: 1px;
+    text-align: center;  
 }
 @media screen and (max-width: 300px) {
+    .project-tile .technologies-in-project-container .technologies-in-project p {
+        font-size: 12px;
+    }
+    .project-tile .technologies-in-project-container .project-type p {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 250px) {
+    .project-tile .technologies-in-project-container .technologies-in-project p {
+        font-size: 11px;
+    }
+    .project-tile .technologies-in-project-container .project-type p {
+        font-size: 11px;
+    }
+}
+@media screen and (max-width: 200px) {
     .project-tile .technologies-in-project-container .technologies-in-project p {
         font-size: 10px;
     }
@@ -538,7 +555,12 @@ from {
     color: var(--cool-gray);
     font-family: var(--my-font);
 }
-
+@media screen and (max-width: 400px) {
+    .project-tile .project-description-and-buttons-container{
+        max-height: 385px;
+        min-height: 385px;
+    }
+}
 
 .project-tile .project-description-and-buttons-container a {
     border: 2px solid var(--cool-gray);
@@ -656,13 +678,6 @@ from {
     color: var(--white);
 }
 
-#navbar .menu-buttons-container-hidden {
-    /*this is css for navbar links: not displayed in small screens (when user click second time on burger bar icon to hide menu) - but displayed on large screens if user increase width of screen*/
-    display: flex;
-    background-color: var(--cool-gray);
-    color: var(--white);
-}
-
 #navbar .aclass {
     color: var(--white);
     text-decoration: none;
@@ -724,10 +739,7 @@ from {
         which is decided by js methods showMenu() & hideMenu() */
 
     }
-    #navbar .menu-buttons-container-hidden {
-        display:none;
-        top: -1000%;      
-    }
+    
     #navbar i {
         display: block;
         cursor: pointer;
@@ -741,7 +753,7 @@ from {
     }
     @keyframes move-menu-down {
         from {
-            top: -400%;
+            top: -1000%;
             }
             to {
                 top: 0%;
