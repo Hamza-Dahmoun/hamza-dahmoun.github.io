@@ -65,6 +65,9 @@ html, body {
 }
 
 @media screen and (max-width: 400px) {
+    #welcome-section {
+        margin-top: 40px;
+    }
     #welcome-section h1 {
         font-size: 27px;
         letter-spacing: 3px;
