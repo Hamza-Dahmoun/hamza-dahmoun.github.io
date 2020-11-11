@@ -912,6 +912,15 @@ from {
         font-size: 48px;
     }
 }
+@media screen and (max-width: 250px) {
+    #contacts #social-media-profiles-links-container a {
+        margin: 5px;
+        width: 65px;
+        height: 65px;
+        line-height: 65px;
+        font-size: 40px;
+    }
+}
 
 #contacts #social-media-profiles-links-container a:hover {
     transform: scale(1.1);
