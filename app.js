@@ -3,6 +3,7 @@ document.querySelector("#navbar i").addEventListener("click", showMenu);
 function showMenu() {
     let menuBtnContainer = document.getElementById("menu-buttons-container");
     menuBtnContainer.className = "menu-buttons-container-shown";
+    menuBtnContainer.style.animationName = "move-menu-down";
     /*Please read the description of css class .menu-buttons-container-shown in css file*/
 
 
@@ -12,7 +13,8 @@ function showMenu() {
 }
 function hideMenu() {
     let menuBtnContainer = document.getElementById("menu-buttons-container");
-    menuBtnContainer.className = "menu-buttons-container-hidden";
+    // menuBtnContainer.className = "menu-buttons-container-hidden";
+    menuBtnContainer.style.animationName = "move-menu-up";
     /*Please read the description of css class .menu-buttons-container-hidden in css file*/
 
     document.querySelector("#navbar i").removeEventListener("click", hideMenu);

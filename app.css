@@ -714,13 +714,19 @@ from {
         color: var(--white);
         position: absolute;
         width: 100%;
-        transition-duration: 1.5s;
-        top: 0%;
+        top: -1000%;
+        /* notice that the menu is displayed but is far away in the top */
         z-index: 10;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        /* this last property will make the menu take the css of the final state of the animation, 
+        which is whether top:0% or top: -1000% depending on which animation it's having 
+        which is decided by js methods showMenu() & hideMenu() */
+
     }
     #navbar .menu-buttons-container-hidden {
-        display: none;
-        top: -1000%;
+        display:none;
+        top: -1000%;      
     }
     #navbar i {
         display: block;
@@ -733,6 +739,22 @@ from {
         border-radius: 2px;
         padding: 3px;
     }
+    @keyframes move-menu-down {
+        from {
+            top: -400%;
+            }
+            to {
+                top: 0%;
+            }
+        }
+        @keyframes move-menu-up {
+            from {
+                top: 0%;
+                }
+                to {
+        top: -1000%;
+                }
+            }
 }
 
 #contacts {
