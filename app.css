@@ -64,6 +64,10 @@ html, body {
     letter-spacing: 5px;
     display: inline-block;
     padding-right: 5px; padding-left: 5px;
+    animation-name: switch-color;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 @media screen and (max-width: 600px) {    
@@ -280,6 +284,10 @@ from {
     margin-top: 7%;
     margin-bottom: 7%;
     width: 80%; margin-left: auto; margin-right:auto;
+    animation-name: switch-color;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 .title {
@@ -288,6 +296,10 @@ from {
     color: var(--cool-gray);
     letter-spacing: 10px;
     font-size: 50px;
+    animation-name: switch-color;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 .title p{
     display:inline-block;
@@ -448,6 +460,10 @@ from {
     flex-direction: column;
     justify-content: center;
     transition-duration: 0.6s;
+    animation-name: switch-color;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 @media screen and (max-width: 400px) {
     .project-tile .project-name-container {
@@ -490,6 +506,10 @@ from {
     justify-content: space-between;
     padding: 0px;
     transition-duration: 0.6s;
+    animation-name: switch-color;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 @media screen and (max-width: 400px) {
     .project-tile .technologies-in-project-container {
@@ -572,6 +592,10 @@ from {
     padding-top: 100px;;
     color: var(--cool-gray);
     font-family: var(--my-font);
+    animation-name: switch-color;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 .project-tile .project-description-and-buttons-container a {
@@ -579,6 +603,10 @@ from {
     padding: 8px;
     text-decoration: none;
     color: var(--cool-gray);
+    animation-name: switch-color;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 .project-tile .project-description-and-buttons-container .project-description-container {
@@ -822,6 +850,10 @@ from {
     font-size: 20px;
     color: var(--cool-gray);
     letter-spacing: 2px;
+    animation-name: switch-color;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 @media screen and (max-width: 600px) {
@@ -854,6 +886,10 @@ from {
 #contacts p strong {
     color: var(--cool-gray)/*#555*/
     ;
+    animation-name: switch-color;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 #contacts #social-media-profiles-links-container {
