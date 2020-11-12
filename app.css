@@ -958,6 +958,55 @@ from {
     transition-duration: 0.5s;
 }
 
+#email-form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;margin-right: auto; margin-left: auto;
+    margin-top: 20px;
+}
+
+#email-form button {
+    padding: 10px;
+    margin-top: 20px;
+    color: var(--white);
+    background-color: var(--cool-gray);
+    border: 1px solid var(--cool-gray);
+    font-size: 20px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    width: 150px;margin-left: auto; margin-right: auto;
+    animation-name: switch-bg-color;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@media screen and (max-width: 600px) {
+    #email-form button {
+        padding: 9px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #email-form{
+        width: 98%;margin-right: 0.5%; margin-left: 0.5%;
+    }
+    #email-form button {
+        padding: 9px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    #email-form button {
+        padding: 7px;
+        font-size: 14px;
+    }
+}
+
+
 footer {
     text-align: center;
     width: 100%;
