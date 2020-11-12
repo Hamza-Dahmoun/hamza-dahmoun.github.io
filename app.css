@@ -958,6 +958,45 @@ from {
     transition-duration: 0.5s;
 }
 
+#separator-container{
+    margin-top:50px;
+    position: relative;
+    display:flex; flex-direction: column; justify-content: center;
+}
+#separator-container hr{
+    border:4px solid var(--cool-gray);
+    width: 600px;
+    animation-name: switch-bg-color;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#separator-container span{
+     z-index: 15;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        /*move the element50% to left and to top, because in fact the above 3 propertie will not center
+            the element itself but it centers the top-left edge of the element
+        */
+        font-size: 18px;
+        font-weight: bold;
+        height: 55px;
+        line-height: 55px;
+        width: 55px;
+        border-radius: 50%;
+        border:2px solid var(--white);
+        background-color: var(--cool-gray);
+        color: var(--white);
+        text-align:center;
+        animation-name: switch-bg-color;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
 #email-form{
     display:flex;
     flex-direction: column;
@@ -972,7 +1011,7 @@ from {
     color: var(--white);
     background-color: var(--cool-gray);
     border: 1px solid var(--cool-gray);
-    font-size: 20px;
+    font-size: 18px;
     cursor: pointer;
     transition-duration: 0.5s;
     width: 150px;margin-left: auto; margin-right: auto;
@@ -983,30 +1022,42 @@ from {
 }
 
 @media screen and (max-width: 600px) {
+    #separator-container hr{
+        width: 94%;margin-right: auto; margin-left: auto;
+    }
     #email-form{
         width: 400px;
     }
     #email-form button {
         padding: 9px;
-        font-size: 18px;
+        font-size: 16px;
         width: 125px;
+    }
+    #separator-container span{
+        font-size: 16px;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) {    
     #email-form{
         width: 98%;margin-right: 0.5%; margin-left: 0.5%;
     }
     #email-form button {
         padding: 9px;
-        font-size: 16px;
+        font-size: 14px;
+    }
+    #separator-container span{
+        font-size: 14px;
+        height: 45px;
+        line-height: 45px;
+        width: 45px;
     }
 }
 
 @media screen and (max-width: 250px) {
     #email-form button {
         padding: 7px;
-        font-size: 14px;
+        font-size: 13px;
     }
 }
 
