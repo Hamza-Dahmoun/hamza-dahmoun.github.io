@@ -65,7 +65,7 @@ function projectTouchEnd(event) {
         //2- hide the project description and links
         let project_description_and_buttons_container = event.target.closest(".project-tile").querySelector(".project-description-and-buttons-container");//bringing the nearest element that have a class 'project-description-and-buttons-container'    
         project_description_and_buttons_container.style.opacity = 0;
-    }, 400);
+    }, 1000);
 
 }
 
