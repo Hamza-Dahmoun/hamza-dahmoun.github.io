@@ -47,6 +47,15 @@ html, body {
         color: var(--gray);
     }
 }
+@keyframes pulsing-skills {
+    0% {
+        transform: scale(0.99);
+    }
+
+    100% {
+        transform: scale(1.01);
+    }
+}
 
 #welcome-section p {
     font-size: 25px;
@@ -306,6 +315,10 @@ from {
 
 #my-technologies div {
     margin: 20px;
+    animation-name: pulsing-skills;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 #my-technologies div i {
