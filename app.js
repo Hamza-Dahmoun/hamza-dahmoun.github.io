@@ -74,7 +74,9 @@ document.getElementById("load-more-btn").addEventListener("click", displaySecond
 function displaySecondaryProjects(){
     let secondaryProjects = document.getElementsByClassName("secondary-project");
     for(let i=0; i<secondaryProjects.length; i++){
-        secondaryProjects[i].style.display = "block";
+        setTimeout(function(){
+            secondaryProjects[i].style.display = "block";
+        }, (i+1)*400);        
     }
 
     //lets nw change the function of the click event of this button
