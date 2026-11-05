@@ -12,13 +12,13 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://hamza-dahmoun.github.io" />
 <!-- JS gate: reveal/animation styles only apply when JS runs, so the page never loads blank. -->
-<script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__motion)document.documentElement.classList.remove('js');},4000);try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__motion)document.documentElement.classList.remove('js');},4000);</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 <style>
   :root {
-    /* dark (default) */
+    color-scheme: dark;
     --bg:        #0B0F1A;
     --bg-2:      #0E1320;
     --surface:   #121829;
@@ -38,23 +38,6 @@
     --body: "Inter", system-ui, sans-serif;
     --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
     --maxw: 1120px;
-  }
-
-  :root[data-theme="light"] {
-    --bg:        #F6F7FB;
-    --bg-2:      #EEF1F7;
-    --surface:   #FFFFFF;
-    --elevated:  #FFFFFF;
-    --line:      #DDE3ED;
-    --line-soft: #E7EBF2;
-    --ink:       #141A27;
-    --muted:     #596377;
-    --accent:    #2E5BE6;
-    --accent-dim:#9DB4F0;
-    --amber:     #C7791A;
-    --mint:      #1A9E7F;
-    --violet:    #6D4FD6;
-    --glow:      rgba(46,91,230,0.22);
   }
 
   * { box-sizing: border-box; }
@@ -83,11 +66,6 @@
       radial-gradient(700px 500px at 0% 0%, rgba(169,139,255,0.06), transparent 55%);
     pointer-events: none;
     z-index: 0;
-  }
-  :root[data-theme="light"] body::before {
-    background:
-      radial-gradient(900px 500px at 78% -8%, rgba(46,91,230,0.08), transparent 60%),
-      radial-gradient(700px 500px at 0% 0%, rgba(109,79,214,0.05), transparent 55%);
   }
 
   .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; position: relative; z-index: 1; }
@@ -127,17 +105,6 @@
   }
   .nav-links a:hover { color: var(--ink); }
   .nav-links a:hover::after { transform: scaleX(1); }
-  .theme-toggle {
-    display: inline-grid; place-items: center; width: 38px; height: 38px;
-    border: 1px solid var(--line); border-radius: 10px; background: var(--surface);
-    color: var(--muted); cursor: pointer; transition: color .15s ease, border-color .15s ease, transform .12s ease;
-  }
-  .theme-toggle:hover { color: var(--ink); border-color: var(--accent-dim); }
-  .theme-toggle:active { transform: scale(0.94); }
-  .theme-toggle svg { width: 18px; height: 18px; }
-  .theme-toggle .sun { display: none; }
-  :root[data-theme="light"] .theme-toggle .sun { display: block; }
-  :root[data-theme="light"] .theme-toggle .moon { display: none; }
   @media (max-width: 760px) { .nav-links { display: none; } }
 
   /* ---------- sections ---------- */
@@ -194,7 +161,6 @@
   .btn:active { transform: translateY(0); }
   .btn.primary { background: var(--accent); color: #06101F; font-weight: 700; }
   .btn.primary:hover { box-shadow: 0 12px 28px -12px var(--glow); }
-  :root[data-theme="light"] .btn.primary { color: #fff; }
   .btn.ghost { border-color: var(--line); background: var(--surface); color: var(--ink); }
   .btn.ghost:hover { border-color: var(--accent-dim); }
 
@@ -204,7 +170,6 @@
     box-shadow: 0 30px 60px -30px rgba(0,0,0,0.6);
     overflow: hidden; font-family: var(--mono); font-size: 13.5px; line-height: 1.9;
   }
-  :root[data-theme="light"] .codecard { box-shadow: 0 30px 60px -34px rgba(20,26,39,0.28); }
   .codecard .bar {
     display: flex; align-items: center; gap: 7px; padding: 12px 15px;
     border-bottom: 1px solid var(--line-soft); background: var(--surface);
@@ -237,7 +202,6 @@
   /* ---------- about ---------- */
   .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 52px; }
   .about-grid p { margin: 0 0 18px; max-width: 60ch; color: #c2cadb; }
-  :root[data-theme="light"] .about-grid p { color: #333c4c; }
   .about-grid p:last-child { margin-bottom: 0; }
   .whoami {
     font-family: var(--mono); font-size: 13px; background: var(--surface);
@@ -262,7 +226,6 @@
   .tl .when { font-family: var(--mono); color: var(--muted); font-size: 12.5px; margin-top: 8px; }
   .tl ul { margin: 16px 0 0; padding: 0; list-style: none; }
   .tl li { position: relative; padding-left: 20px; margin-bottom: 11px; color: #c2cadb; }
-  :root[data-theme="light"] .tl li { color: #333c4c; }
   .tl li:last-child { margin-bottom: 0; }
   .edu-head { margin: 64px 0 28px; }
   .tl li::before { content: "▹"; position: absolute; left: 0; color: var(--accent); }
@@ -288,7 +251,6 @@
   .skill h3 { font-family: var(--mono); font-weight: 500; font-size: 13px; color: var(--mint); margin: 0 0 10px; }
   .skill h3::before { content: "$ "; color: var(--muted); }
   .skill p { margin: 0; color: #c2cadb; font-size: 14.5px; line-height: 1.7; }
-  :root[data-theme="light"] .skill p { color: #333c4c; }
   @media (max-width: 760px) {
     .skills-grid { grid-template-columns: 1fr; }
     .skill:nth-child(odd) { border-right: none; }
@@ -312,7 +274,6 @@
   .work-item .wk-no { font-family: var(--mono); font-size: 12.5px; color: var(--amber); }
   .work-item h3 { font-family: var(--display); font-weight: 600; font-size: 19px; letter-spacing: -0.01em; margin: 0; }
   .work-item p { margin: 10px 0 14px; color: #c2cadb; max-width: 70ch; }
-  :root[data-theme="light"] .work-item p { color: #333c4c; }
 
   /* ---------- now ---------- */
   .now {
@@ -324,7 +285,6 @@
   .now .eyebrow { margin-bottom: 10px; }
   .now h2 { font-family: var(--display); font-weight: 600; font-size: clamp(22px,3vw,30px); letter-spacing: -0.02em; margin: 0 0 12px; }
   .now p { margin: 0; max-width: 62ch; color: #c2cadb; }
-  :root[data-theme="light"] .now p { color: #333c4c; }
   @media (max-width: 760px) { .now { padding: 28px 24px; } }
 
   /* ---------- contact ---------- */
@@ -521,9 +481,6 @@
   .big.done .c { transition-delay: 0s; transition-duration: .25s; }
   .big.done .c:hover { translate: 0 -.14em; color: var(--accent); }
 
-  /* circular theme wipe */
-  ::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
-
   @media (prefers-reduced-motion: reduce) {
     .js .reveal { opacity: 1 !important; translate: none !important; transition: none !important; }
     .js header.nav, .js .hero .status, .js .hero .lede, .js .hero .cta-row, .js .codecard, .now::before, .btn.primary::after,
@@ -552,10 +509,6 @@
         <a href="#work">work</a>
         <a href="#contact">contact</a>
       </nav>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme">
-        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-      </button>
     </div>
   </div>
 </header>
@@ -805,31 +758,6 @@
     io.observe(el);
   };
 
-  // Theme toggle (persisted), with a circular wipe from the button.
-  var fieldColor = function () {};
-  var btn = document.getElementById("themeToggle");
-  if (btn) {
-    btn.addEventListener("click", function () {
-      var cur = root.getAttribute("data-theme") === "light" ? "light" : "dark";
-      var next = cur === "light" ? "dark" : "light";
-      var swap = function () {
-        root.setAttribute("data-theme", next);
-        try { localStorage.setItem("theme", next); } catch (e) {}
-        fieldColor();
-      };
-      if (reduce || !document.startViewTransition) { swap(); return; }
-      var r = btn.getBoundingClientRect();
-      var x = r.left + r.width / 2, y = r.top + r.height / 2;
-      var end = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
-      document.startViewTransition(swap).ready.then(function () {
-        root.animate(
-          { clipPath: ["circle(0px at " + x + "px " + y + "px)", "circle(" + end + "px at " + x + "px " + y + "px)"] },
-          { duration: 650, easing: "cubic-bezier(.22,1,.36,1)", pseudoElement: "::view-transition-new(root)" }
-        );
-      });
-    });
-  }
-
   // Scroll-linked state: nav, progress bar, timeline, active link, parallax.
   var nav = $("header.nav");
   var bar = document.createElement("div");
@@ -1015,8 +943,6 @@
     hero.insertBefore(cv, hero.firstChild);
     var ctx = cv.getContext("2d");
     var W = 0, H = 0, dots = [], GAP = fine ? 30 : 38, colour = "#4E9BFF";
-    fieldColor = function () { colour = getComputedStyle(root).getPropertyValue("--accent").trim(); };
-    fieldColor();
     var size = function () {
       var dpr = Math.min(window.devicePixelRatio || 1, 2);
       W = hero.offsetWidth; H = hero.offsetHeight;
