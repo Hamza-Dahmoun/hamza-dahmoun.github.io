@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Hamza Dahmoun — Frontend &amp; Software Engineer</title>
-<meta name="description" content="Hamza Dahmoun — Frontend-focused Software Engineer (MSc) with 10 years in software: Vue 3, TypeScript, full-stack .NET. Open to remote, onsite and relocation." />
+<meta name="description" content="Hamza Dahmoun — Frontend-focused Software Engineer (MSc) with 10 years in software: Vue 3, TypeScript, full-stack .NET, mobile with Kotlin Multiplatform. Open to remote, onsite and relocation." />
 <meta name="theme-color" content="#0B0F1A" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B0F1A'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-weight='700' font-size='30' fill='%234E9BFF'%3EHD%3C/text%3E%3C/svg%3E" />
 <meta property="og:title" content="Hamza Dahmoun — Frontend &amp; Software Engineer" />
@@ -275,6 +275,45 @@
   .work-item h3 { font-family: var(--display); font-weight: 600; font-size: 19px; letter-spacing: -0.01em; margin: 0; }
   .work-item p { margin: 10px 0 14px; color: #c2cadb; max-width: 70ch; }
 
+  /* ---------- mobile apps ---------- */
+  .app { border: 1px solid var(--line); border-radius: 16px; background: var(--surface); padding: 34px 34px 30px; overflow: hidden; }
+  .app-head { display: flex; align-items: center; gap: 18px; }
+  .app-icon { width: 64px; height: 64px; border-radius: 16px; flex: none; box-shadow: 0 12px 30px -14px var(--glow); }
+  .app h3 { font-family: var(--display); font-weight: 600; font-size: clamp(20px, 2.4vw, 25px); letter-spacing: -0.01em; margin: 0; }
+  .app-ar { display: inline-block; font-family: "Noto Naskh Arabic", "Geeza Pro", serif; font-weight: 600; color: var(--mint); font-size: .85em; margin-inline-start: 8px; }
+  .app-meta { font-family: var(--mono); font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+  .app-body { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 24px; }
+  .app-body p { margin: 0; color: #c2cadb; }
+  .app-stats { margin-top: 30px; }
+  .app-stats .s { background: var(--surface); }
+  .phones {
+    display: grid; grid-auto-flow: column; grid-auto-columns: minmax(150px, 1fr); gap: 18px;
+    margin: 30px -34px 0; padding: 10px 34px 22px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin;
+  }
+  .phone { margin: 0; scroll-snap-align: center; }
+  .phone img {
+    display: block; width: 100%; height: auto; border-radius: 18px; border: 5px solid var(--elevated);
+    outline: 1px solid var(--line); box-shadow: 0 24px 40px -26px rgba(0,0,0,.8);
+    transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s ease;
+  }
+  .phone:hover img { transform: translateY(-8px) scale(1.03); box-shadow: 0 30px 50px -24px var(--glow); }
+  .phone figcaption { font-family: var(--mono); font-size: 12px; color: var(--muted); text-align: center; margin-top: 10px; }
+  .app-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+  .app-note { font-family: var(--mono); font-size: 12.5px; color: var(--muted); margin: 16px 0 0; }
+  .app-note a { color: var(--accent); }
+  @media (max-width: 820px) {
+    .app { padding: 26px 22px 24px; }
+    .app-body { grid-template-columns: 1fr; gap: 16px; }
+    .phones { grid-auto-columns: 58%; margin: 26px -22px 0; padding: 10px 22px 20px; }
+    .app-head { align-items: flex-start; }
+    .app-ar { display: block; margin: 4px 0 0; }
+  }
+  .phones.fan .phone { opacity: 0; translate: 0 70px; rotate: var(--r, 0deg); transition: opacity .7s ease var(--d, 0s), translate 1s cubic-bezier(.22,1,.36,1) var(--d, 0s), rotate 1s cubic-bezier(.22,1,.36,1) var(--d, 0s); }
+  .phones.fan.on .phone { opacity: 1; translate: none; rotate: 0deg; }
+  .phones.float .phone img { animation: float 6s ease-in-out infinite; animation-delay: var(--f, 0s); }
+  .phones.float .phone:hover img { animation-play-state: paused; }
+  @keyframes float { 50% { translate: 0 -7px; } }
+
   /* ---------- now ---------- */
   .now {
     border: 1px solid var(--line); border-radius: 16px; padding: 38px 42px;
@@ -488,6 +527,7 @@
     .js .hero h1:not(.split) { opacity: 1; }
     .btn.primary::after { display: none; }
     .btn:hover { transform: none; }
+    .phone:hover img { transform: none; }
     .tl::before, .eyebrow::after { transition: none; }
   }
   @media print {
@@ -507,6 +547,7 @@
         <a href="#experience">experience</a>
         <a href="#skills">skills</a>
         <a href="#work">work</a>
+        <a href="#apps">apps</a>
         <a href="#contact">contact</a>
       </nav>
     </div>
@@ -553,7 +594,7 @@
   <!-- STACK TICKER -->
   <div class="ticker" aria-hidden="true">
     <div class="ticker-skew">
-        <div class="ticker-row"><div class="ticker-set"><span>Vue 3</span><span>TypeScript</span><span>GraphQL</span><span>Electron</span><span>Vuex</span><span>Pinia</span><span>Cypress</span><span>Vite</span></div></div>
+        <div class="ticker-row"><div class="ticker-set"><span>Vue 3</span><span>TypeScript</span><span>GraphQL</span><span>Electron</span><span>Vuex</span><span>Pinia</span><span>Cypress</span><span>Vite</span><span>Kotlin Multiplatform</span><span>Compose</span></div></div>
         <div class="ticker-row rev"><div class="ticker-set"><span>ASP.NET Core</span><span>C#</span><span>SQL Server</span><span>Adyen</span><span>Offline-first</span><span>i18n</span><span>Seats.io</span><span>Lighthouse</span></div></div>
     </div>
   </div>
@@ -662,7 +703,7 @@
         <div class="skills-grid">
           <div class="skill"><h3>frameworks</h3><p>Vue 3, Vue 2, TypeScript, JavaScript ES6+, Composition &amp; Options API, Vue Router, Electron.</p></div>
           <div class="skill"><h3>state &amp; data</h3><p>Pinia, Vuex, GraphQL, REST APIs, auth flows, CRUD, caching and data reuse.</p></div>
-          <div class="skill"><h3>ui &amp; desktop</h3><p>SCSS / Sass, responsive UI, reusable component architecture, Electron desktop apps.</p></div>
+          <div class="skill"><h3>ui, desktop &amp; mobile</h3><p>SCSS / Sass, responsive UI, reusable components, Electron desktop apps, Kotlin &amp; Compose Multiplatform mobile apps.</p></div>
           <div class="skill"><h3>testing &amp; tooling</h3><p>Cypress end-to-end testing, Git, npm, Vite, ESLint, Prettier, Bitbucket Pipelines, code review.</p></div>
           <div class="skill"><h3>backend</h3><p>ASP.NET Core MVC, C#, SQL Server, RESTful APIs, Clean / Onion architecture.</p></div>
           <div class="skill"><h3>performance &amp; domain</h3><p>Profiling with Chrome DevTools &amp; Lighthouse, offline-first, payments (Adyen), seat maps (Seats.io), i18n.</p></div>
@@ -703,13 +744,56 @@
     </div>
   </section>
 
+  <!-- APPS -->
+  <section id="apps" class="reveal">
+    <div class="wrap">
+      <div class="eyebrow"><span class="n">05</span> // apps</div>
+      <h2 class="sec">Mobile apps.</h2>
+      <article class="app">
+        <div class="app-head">
+          <img class="app-icon" src="apps/daleel/icon.png" width="64" height="64" alt="" />
+          <div>
+            <h3>Daleel: Quran &amp; Hadith Finder <span class="app-ar" lang="ar" dir="rtl">دليل القرآن والأحاديث</span></h3>
+            <div class="app-meta">Android, in closed testing on Google Play · iOS from the same codebase</div>
+          </div>
+        </div>
+        <div class="app-body">
+          <p>An offline search engine for Arabic religious texts. You type the words you remember, and Daleel finds the matching verse or hadith across the full Quran (Hafs and Warsh) and 62,000+ hadiths from nine collections.</p>
+          <p>The UI and search logic are written once in Kotlin and shared between Android and iOS. A custom Arabic normalizer ignores diacritics, hamza variants and Uthmani spelling, so everyday typing still matches. The content database is built at compile time and bundled with the app: no network, no data collected.</p>
+        </div>
+        <div class="stats app-stats">
+          <div class="s"><div class="num" data-count="62000" data-suffix="+">62,000+</div><div class="cap">hadiths from nine collections, plus the full Quran</div></div>
+          <div class="s"><div class="num" data-count="2" data-suffix="">2</div><div class="cap">platforms from one Kotlin codebase</div></div>
+          <div class="s"><div class="num" data-count="160" data-suffix="+">160+</div><div class="cap">unit tests</div></div>
+          <div class="s"><div class="num" data-count="0" data-suffix="">0</div><div class="cap">network calls or data collected</div></div>
+        </div>
+        <div class="phones" aria-label="Daleel screenshots">
+          <figure class="phone"><img src="assets/daleel/quran-search.webp" width="540" height="960" loading="lazy" alt="Search results for a phrase across the Quran, with the matching words highlighted" /><figcaption>Quran search</figcaption></figure>
+          <figure class="phone"><img src="assets/daleel/verse.webp" width="540" height="960" loading="lazy" alt="A single verse with save, copy and share actions and links to the previous and next verse" /><figcaption>Verse view</figcaption></figure>
+          <figure class="phone"><img src="assets/daleel/hadith-search.webp" width="540" height="960" loading="lazy" alt="Search results for the same phrase across the hadith collections" /><figcaption>Hadith search</figcaption></figure>
+          <figure class="phone"><img src="assets/daleel/saved.webp" width="540" height="960" loading="lazy" alt="Saved verses and hadiths, filterable by Quran or hadith" /><figcaption>Saved</figcaption></figure>
+          <figure class="phone"><img src="assets/daleel/hadith.webp" width="540" height="960" loading="lazy" alt="The full text of a hadith from Muwatta Malik" /><figcaption>Hadith view</figcaption></figure>
+        </div>
+        <div class="chips">
+          <span class="chip">Kotlin Multiplatform</span><span class="chip">Compose Multiplatform</span><span class="chip">Kotlin</span><span class="chip">SQLite</span><span class="chip">Android</span><span class="chip">iOS</span><span class="chip">Arabic text search</span>
+        </div>
+        <div class="app-links">
+          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.hamzadahmoun.daleel" target="_blank" rel="noopener">Get it on Google Play</a>
+          <a class="btn ghost" href="apps/daleel/">App page</a>
+          <a class="btn ghost" href="apps/daleel/privacy/">Privacy policy</a>
+        </div>
+        <p class="app-note">The app is in closed testing, so the Play listing only opens for invited testers. <a href="mailto:hamza.dahmoun7@gmail.com?subject=Daleel%20tester%20access">Ask me for access.</a></p>
+      </article>
+    </div>
+  </section>
+
   <!-- NOW -->
   <section class="reveal">
     <div class="wrap">
       <div class="now">
         <div class="eyebrow"><span class="n">#</span> now</div>
         <h2>Building mobile apps, with AI coding agents.</h2>
-        <p>On the side I'm building mobile apps, and I'm going deep on agentic AI software-engineering workflows: using AI coding agents in day-to-day delivery and working out where they genuinely speed up production work.</p>
+        <p>Outside client work I build mobile apps (Daleel, above, is the first) and I'm going deep on agentic AI software-engineering workflows: using AI coding agents in day-to-day delivery and working out where they genuinely speed up production work.</p>
       </div>
     </div>
   </section>
@@ -717,7 +801,7 @@
   <!-- CONTACT -->
   <section id="contact" class="contact reveal">
     <div class="wrap">
-      <div class="eyebrow"><span class="n">05</span> // contact</div>
+      <div class="eyebrow"><span class="n">06</span> // contact</div>
       <h2 class="big">Let's build something that lasts.</h2>
       <p class="sub">Open to frontend, full-stack and mobile roles: full-time, contract or freelance, remote, onsite or with relocation. The quickest way to reach me:</p>
       <div class="contact-links">
@@ -799,7 +883,7 @@
     var step = function (ts) {
       if (t0 === null) t0 = ts;
       var p = Math.min((ts - t0) / dur, 1);
-      el.textContent = pre + Math.round((1 - Math.pow(1 - p, 3)) * target) + suf;
+      el.textContent = pre + Math.round((1 - Math.pow(1 - p, 3)) * target).toLocaleString("en") + suf;
       if (p < 1) requestAnimationFrame(step); else el.classList.add("done");
     };
     requestAnimationFrame(step);
@@ -1108,6 +1192,21 @@
       if (i === 0) setTimeout(stressRun, 500);
     }, 0.15);
   });
+
+  // App screenshots fan up into place, then drift gently.
+  var phones = $(".phones");
+  if (phones) {
+    phones.classList.add("fan");
+    $$(".phone", phones).forEach(function (p, i, all) {
+      p.style.setProperty("--d", i * 0.11 + "s");
+      p.style.setProperty("--r", (i - (all.length - 1) / 2) * 5 + "deg");
+      p.style.setProperty("--f", i * -1.2 + "s");
+    });
+    once(phones, function () {
+      phones.classList.add("on");
+      setTimeout(function () { phones.classList.add("float"); }, 1600);
+    }, 0.2);
+  }
 
   // Contact headline letters.
   var big = $(".contact .big");
