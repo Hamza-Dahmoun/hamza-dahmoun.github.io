@@ -277,6 +277,7 @@
 
   /* ---------- mobile apps ---------- */
   .app { border: 1px solid var(--line); border-radius: 16px; background: var(--surface); padding: 34px 34px 30px; overflow: hidden; }
+  .app + .app { margin-top: 28px; }
   .app-head { display: flex; align-items: center; gap: 18px; }
   .app-icon { width: 64px; height: 64px; border-radius: 16px; flex: none; box-shadow: 0 12px 30px -14px var(--glow); }
   .app h3 { font-family: var(--display); font-weight: 600; font-size: clamp(20px, 2.4vw, 25px); letter-spacing: -0.01em; margin: 0; }
@@ -784,6 +785,39 @@
         </div>
         <p class="app-note">The app is in closed testing, so the Play listing only opens for invited testers. <a href="mailto:hamza.dahmoun7@gmail.com?subject=Daleel%20tester%20access">Ask me for access.</a></p>
       </article>
+      <article class="app">
+        <div class="app-head">
+          <img class="app-icon" src="assets/rattibme/icon.webp" width="64" height="64" alt="" />
+          <div>
+            <h3>RattibMe <span class="app-ar" lang="ar" dir="rtl">رتّبني</span></h3>
+            <div class="app-meta">Android, coming soon to Google Play · built with Flutter, so iOS can follow from the same code</div>
+          </div>
+        </div>
+        <div class="app-body">
+          <p>A sliding-number puzzle game for Android, built with Flutter and Dart. Players put the tiles in order across 114 levels, on boards from 3×3 to 8×8, with fixed numbered cells and rocks added along the way.</p>
+          <p>A built-in solver checks that every level can be solved and powers the hints and the “Solve it for me” button. The seasonal level road, its landmarks and the tiles are all drawn in code, with no licensed artwork. The game plays offline in 11 languages, including right-to-left Arabic, and is funded by Google AdMob ads with Google’s consent form.</p>
+        </div>
+        <div class="stats app-stats">
+          <div class="s"><div class="num" data-count="114" data-suffix="">114</div><div class="cap">levels, every one checked solvable by the solver</div></div>
+          <div class="s"><div class="num">3×3 → 8×8</div><div class="cap">boards, with fixed cells and rocks</div></div>
+          <div class="s"><div class="num" data-count="11" data-suffix="">11</div><div class="cap">languages, including right-to-left Arabic</div></div>
+          <div class="s"><div class="num" data-count="0" data-suffix="">0</div><div class="cap">licensed artwork: road, landmarks and tiles drawn in code</div></div>
+        </div>
+        <div class="phones" aria-label="RattibMe screenshots">
+          <figure class="phone"><img src="assets/rattibme/home.webp" width="540" height="960" loading="lazy" alt="Home screen with the points total and the next level to play" /><figcaption>Home</figcaption></figure>
+          <figure class="phone"><img src="assets/rattibme/road.webp" width="540" height="960" loading="lazy" alt="The level road: numbered stops on a winding path past a lighthouse and palm trees" /><figcaption>Level road</figcaption></figure>
+          <figure class="phone"><img src="assets/rattibme/board.webp" width="540" height="960" loading="lazy" alt="A 7×7 board with fixed numbered cells, two rocks and empty cells, plus hint and solve buttons" /><figcaption>Puzzle board</figcaption></figure>
+          <figure class="phone"><img src="assets/rattibme/stats.webp" width="540" height="960" loading="lazy" alt="Stats screen with the player's title, total points and personal bests" /><figcaption>Stats</figcaption></figure>
+        </div>
+        <div class="chips">
+          <span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">Puzzle solver</span><span class="chip">Custom painting</span><span class="chip">11 languages · RTL</span><span class="chip">Google AdMob</span><span class="chip">Android</span>
+        </div>
+        <div class="app-links">
+          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.hdahmoun.rattib" target="_blank" rel="noopener">Get it on Google Play</a>
+          <a class="btn ghost" href="apps/rattibme/privacy/">Privacy policy</a>
+        </div>
+        <p class="app-note">RattibMe is joining closed testing, so the Play listing only opens for invited testers. <a href="mailto:hamza.dahmoun7@gmail.com?subject=RattibMe%20tester%20access">Ask me for access.</a></p>
+      </article>
     </div>
   </section>
 
@@ -1194,8 +1228,7 @@
   });
 
   // App screenshots fan up into place, then drift gently.
-  var phones = $(".phones");
-  if (phones) {
+  $$(".phones").forEach(function (phones) {
     phones.classList.add("fan");
     $$(".phone", phones).forEach(function (p, i, all) {
       p.style.setProperty("--d", i * 0.11 + "s");
@@ -1206,7 +1239,7 @@
       phones.classList.add("on");
       setTimeout(function () { phones.classList.add("float"); }, 1600);
     }, 0.2);
-  }
+  });
 
   // Contact headline letters.
   var big = $(".contact .big");
